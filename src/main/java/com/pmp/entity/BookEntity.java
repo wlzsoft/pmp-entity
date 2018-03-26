@@ -5,34 +5,29 @@ import java.util.Date;
 
 public class BookEntity implements Serializable{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3470871575302848747L;
+	private static final long serialVersionUID = 4031129668715480206L;
 	
 	public Integer id ;
 	
-	public String bookName;
+    public String bookName;//练习本名称
 	
-	public String language ;
+	public String language	;//	卡片使用的语言	
 	
-	public Integer sharedType;
+	public Integer  sharedType ;//共享类型 (0私有、1只读共享)
 	
-	public String remark;
+	public Date  createTime ;
 	
-	public Date createTime;
+	public Integer  createId ;
 	
-	public Integer createId;
+	public Date  updateTime ;
 	
-	public Date updateTime ;
+	public Integer  updateId ;
 	
-	public Integer updateId;
+	public Date  updateDetailTime ;
 	
-	public Date updateDetailTime;
+	public Integer  updateDetailId ;
 	
-	public Integer updateDetailId;
-	
-	public Boolean isDel;
+	public String  remark   ;
 
 	public Integer getId() {
 		return id;
@@ -41,6 +36,7 @@ public class BookEntity implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 
 	public String getBookName() {
 		return bookName;
@@ -64,14 +60,6 @@ public class BookEntity implements Serializable{
 
 	public void setSharedType(Integer sharedType) {
 		this.sharedType = sharedType;
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
 	}
 
 	public Date getCreateTime() {
@@ -122,12 +110,12 @@ public class BookEntity implements Serializable{
 		this.updateDetailId = updateDetailId;
 	}
 
-	public Boolean getIsDel() {
-		return isDel;
+	public String getRemark() {
+		return remark;
 	}
 
-	public void setIsDel(Boolean isDel) {
-		this.isDel = isDel;
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
-
+	
 }
