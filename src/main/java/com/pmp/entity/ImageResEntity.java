@@ -10,7 +10,9 @@ public class ImageResEntity implements Serializable{
 	
 	public String md5Key;
 	
-	public String resourceUrl;
+	public String fileName;
+	
+	public String resourcesUrl;
 
 	public Integer getId() {
 		return id;
@@ -28,14 +30,21 @@ public class ImageResEntity implements Serializable{
 		this.md5Key = md5Key;
 	}
 
-	public String getResourceUrl() {
-		return resourceUrl;
+	public String getFileName() {
+		return fileName;
 	}
 
-	public void setResourceUrl(String resourceUrl) {
-		this.resourceUrl = resourceUrl;
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
-	
-	
+
+	public String getResourcesUrl() {
+		return resourcesUrl;
+	}
+
+	public void setResourcesUrl(String resourcesUrl) {
+		this.resourcesUrl = resourcesUrl;
+	}
+
 
 }
