@@ -13,6 +13,8 @@ public class BookEntity implements Serializable{
 	
 	public String language	;//	卡片使用的语言	
 	
+	public String area	;//	卡片所属领域
+	
 	public Integer  sharedType ;//共享类型 (0私有、1只读共享)
 	
 	public Date  createTime ;
@@ -116,6 +118,14 @@ public class BookEntity implements Serializable{
 
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
 	}
 	
 }
