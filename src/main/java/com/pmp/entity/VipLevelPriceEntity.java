@@ -27,7 +27,7 @@ public class VipLevelPriceEntity implements Serializable{
 	
 	public Date updateTime;
 	
-	public Date updateId;
+	public Integer updateId;
 
 	public Integer getId() {
 		return id;
@@ -85,11 +85,11 @@ public class VipLevelPriceEntity implements Serializable{
 		this.createId = createId;
 	}
 
-	public Date getUpdateId() {
+	public Integer getUpdateId() {
 		return updateId;
 	}
 
-	public void setUpdateId(Date updateId) {
+	public void setUpdateId(Integer updateId) {
 		this.updateId = updateId;
 	}
 

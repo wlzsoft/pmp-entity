@@ -13,7 +13,7 @@ public class Book_BookClassEntity implements Serializable{
 	
 	public Integer bookId;
 	
-	public Integer bookClassId;
+	public String bookClassKey;
 
 	public Integer getId() {
 		return id;
@@ -31,13 +31,12 @@ public class Book_BookClassEntity implements Serializable{
 		this.bookId = bookId;
 	}
 
-	public Integer getBookClassId() {
-		return bookClassId;
+	public String getBookClassKey() {
+		return bookClassKey;
 	}
 
-	public void setBookClassId(Integer bookClassId) {
-		this.bookClassId = bookClassId;
+	public void setBookClassKey(String bookClassKey) {
+		this.bookClassKey = bookClassKey;
 	}
-	
 
 }
