@@ -16,13 +16,20 @@ public class PointExerciseDetailEntity implements Serializable {
 	  public Integer userId        ;
 	  public Integer bookId;//练习本Id
 	  public Integer pointId        ; //知识点ID
-	  public Date nextExerciseTime ;//'计划下次练习时间',
-	  public Integer exerciseCycle ;// '知识点当前练习周期',
-	  public Integer skilled;//熟练度（0，1，2，3）
+	  
+	  public Integer exerciseCycle ;// '知识点 记忆等级',
+	//public Integer skilled;//熟练度（0，1，2，3）
 	  public Integer conCorrectNumber ;// '连续回答正确次数',
 	  public Integer conErrorNumber ;// '连续回答错误次数',
+	  
 	  public Date firstExerciseDate  ;//首次练习日期
-	  public Date lastExerciseDate   ;//上一次练习日期
+	  
+	  public Date lastExerciseTime  ;//上一次练习时间
+	  public Date nextExerciseTime ; //下一次练习时间
+	  
+	  public Date lastUpdateTime;//上次记忆等级更新时间
+	  public Date nextUpdateTime;//下次记忆等级更新时间
+	  
 	  public Integer exerciseNumber;//练习总次数
 	  public float  correctRate   ;//正确率
 	  public Integer  correctNumber ;//总正确数
@@ -38,12 +45,24 @@ public class PointExerciseDetailEntity implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	public Integer getSkilled() {
-		return skilled;
+
+	public Date getLastExerciseTime() {
+		return lastExerciseTime;
 	}
-	public void setSkilled(Integer skilled) {
-		this.skilled = skilled;
+	public void setLastExerciseTime(Date lastExerciseTime) {
+		this.lastExerciseTime = lastExerciseTime;
+	}
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
+	}
+	public Date getNextUpdateTime() {
+		return nextUpdateTime;
+	}
+	public void setNextUpdateTime(Date nextUpdateTime) {
+		this.nextUpdateTime = nextUpdateTime;
 	}
 	public Integer getUserId() {
 		return userId;
@@ -96,12 +115,7 @@ public class PointExerciseDetailEntity implements Serializable {
 	public void setFirstExerciseDate(Date firstExerciseDate) {
 		this.firstExerciseDate = firstExerciseDate;
 	}
-	public Date getLastExerciseDate() {
-		return lastExerciseDate;
-	}
-	public void setLastExerciseDate(Date lastExerciseDate) {
-		this.lastExerciseDate = lastExerciseDate;
-	}
+	
 	public Integer getExerciseNumber() {
 		return exerciseNumber;
 	}
