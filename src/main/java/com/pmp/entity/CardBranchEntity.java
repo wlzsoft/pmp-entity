@@ -3,33 +3,42 @@ package com.pmp.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class CardEntity implements Serializable{
+public class CardBranchEntity implements Serializable{
 
 	private static final long serialVersionUID = 461079389536773396L;
 	
 	public Integer id	;	
-	public Integer bookId;//练习本Id
-	public Integer pointId	;//知识点ID				
+	 
+	public Integer bookId ;//练习本主键ID
+	 
+	public Integer pointId	;//知识点ID
+	 
+	public Integer cardId;//卡片ID
+	
     public String  cardData  ;//卡片数据
 	public Date createTime	;//创建时间				
 	public Integer createId	;//创建人ID				
 	public Date updateTime	;//修改时间				
 	public Integer updateId	;//修改人ID
+    public Integer version;//版本号
     
-    
-    
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
 	public Integer getBookId() {
 		return bookId;
 	}
 	public void setBookId(Integer bookId) {
 		this.bookId = bookId;
+	}
+	public Integer getCardId() {
+		return cardId;
+	}
+	public void setCardId(Integer cardId) {
+		this.cardId = cardId;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public Integer getPointId() {
 		return pointId;
@@ -66,6 +75,12 @@ public class CardEntity implements Serializable{
 	}
 	public void setUpdateId(Integer updateId) {
 		this.updateId = updateId;
+	}
+	public Integer getVersion() {
+		return version;
+	}
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
 }

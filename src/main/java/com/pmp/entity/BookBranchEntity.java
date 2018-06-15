@@ -3,15 +3,17 @@ package com.pmp.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class BookEntity implements Serializable{
+public class BookBranchEntity implements Serializable{
 
 	private static final long serialVersionUID = 4031129668715480206L;
 	
 	public Integer id ;
 	
+	public Integer bookId;
+	
     public String bookName;//练习本名称
 	
-	public String language;//	卡片使用的语言	
+	public String language	;//	卡片使用的语言	
 	
 	public String area	;//	卡片所属领域
 	
@@ -21,17 +23,15 @@ public class BookEntity implements Serializable{
 	
 	public Integer  createId ;
 	
-	public Date  updateTime ;
+	public Date  auditorTime ;//审核时间
 	
-	public Integer  updateId ;
-	
-	public Date  updateDetailTime ;
-	
-	public Integer  updateDetailId ;
+	public Integer  auditorId ;//审核人Id
 	
 	public String  remark   ;
 	
-	public Integer version ;//线上当前版本号
+	public Integer status;// 状态：(1:待审核  2:审核中  3:审核通过 4: 审核不通过)
+	
+	 public Integer version;//版本号
 
 	public Integer getVersion() {
 		return version;
@@ -90,36 +90,38 @@ public class BookEntity implements Serializable{
 		this.createId = createId;
 	}
 
-	public Date getUpdateTime() {
-		return updateTime;
+
+
+	public Integer getBookId() {
+		return bookId;
 	}
 
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
+	public void setBookId(Integer bookId) {
+		this.bookId = bookId;
 	}
 
-	public Integer getUpdateId() {
-		return updateId;
+	public Date getAuditorTime() {
+		return auditorTime;
 	}
 
-	public void setUpdateId(Integer updateId) {
-		this.updateId = updateId;
+	public void setAuditorTime(Date auditorTime) {
+		this.auditorTime = auditorTime;
 	}
 
-	public Date getUpdateDetailTime() {
-		return updateDetailTime;
+	public Integer getAuditorId() {
+		return auditorId;
 	}
 
-	public void setUpdateDetailTime(Date updateDetailTime) {
-		this.updateDetailTime = updateDetailTime;
+	public void setAuditorId(Integer auditorId) {
+		this.auditorId = auditorId;
 	}
 
-	public Integer getUpdateDetailId() {
-		return updateDetailId;
+	public Integer getStatus() {
+		return status;
 	}
 
-	public void setUpdateDetailId(Integer updateDetailId) {
-		this.updateDetailId = updateDetailId;
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	public String getRemark() {
